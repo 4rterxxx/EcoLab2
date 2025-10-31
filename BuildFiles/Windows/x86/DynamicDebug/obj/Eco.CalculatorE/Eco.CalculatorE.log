@@ -1,0 +1,24 @@
+﻿Build started 30.10.2025 14:19:39.
+     1>Project "C:\vs express\001.InsideACOM\Lessons\Lesson07\Eco.CalculatorE\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorE.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\Eco.CalculatorE.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\vs express\VS Express 2010\VC\bin\CL.exe /c /I..\..\..\HeaderFiles /I..\..\..\SharedFiles /I..\..\..\..\..\Lesson02\Eco.CalculatorA\SharedFiles /I..\..\..\..\..\Lesson03\Eco.CalculatorB\SharedFiles /I"C:\vs express\EcoFramework\Eco.Core1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.MemoryManager1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.InterfaceBus1\SharedFiles" /ZI /nologo /W3 /WX- /Od /Oy- /D ECO_WINDOWS /D ECO_WIN32 /D ECO_X86_32 /D _DEBUG /D _WINDOWS /D ECO_DLL /D UGUID_UTILITY /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\\" /Fd"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\vc100.pdb" /Gz /TC /analyze- /errorReport:prompt ..\..\..\SourceFiles\CEcoCalculatorE.c ..\..\..\SourceFiles\CEcoCalculatorEFactory.c
+         CEcoCalculatorEFactory.c
+         CEcoCalculatorE.c
+         Generating Code...
+       Link:
+         C:\vs express\VS Express 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.dll" /VERSION:"2.0" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\872FEF1DE3314B87AD44D1E7C232C2F0.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.lib" /MACHINE:X86 /DLL "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\CEcoCalculatorE.obj"
+         "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\CEcoCalculatorEFactory.obj"
+            Creating library C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.lib and object C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.exp
+         Eco.CalculatorE.vcxproj -> C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\872FEF1DE3314B87AD44D1E7C232C2F0.dll;#2" /manifest "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\872FEF1DE3314B87AD44D1E7C232C2F0.dll.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\Eco.CalculatorE.unsuccessfulbuild".
+         Touching "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorE\Eco.CalculatorE.lastbuildstate".
+     1>Done Building Project "C:\vs express\001.InsideACOM\Lessons\Lesson07\Eco.CalculatorE\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorE.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.60

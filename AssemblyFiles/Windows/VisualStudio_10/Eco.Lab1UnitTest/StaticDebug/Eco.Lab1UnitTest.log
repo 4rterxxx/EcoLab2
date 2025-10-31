@@ -1,0 +1,13 @@
+﻿Build started 29.10.2025 14:41:29.
+     1>Project "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Eco.Lab1UnitTest\StaticDebug\Eco.Lab1UnitTest.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\vs express\VS Express 2010\VC\bin\CL.exe /c /I..\..\..\SharedFiles /I..\..\..\HeaderFiles /I"C:\vs express\EcoFramework\Eco.Core1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.InterfaceBus1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.System1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.MemoryManager1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.FileSystemManagement1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.List1\SharedFiles" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D UGUID_UTILITY /D ECO_X86_32 /D ECO_WINDOWS /D ECO_WIN32 /D ECO_LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Eco.Lab1UnitTest\StaticDebug\\" /Fd"Eco.Lab1UnitTest\StaticDebug\vc100.pdb" /Gz /TC /analyze- /errorReport:prompt ..\..\..\UnitTestFiles\SourceFiles\EcoLab1.c
+         EcoLab1.c
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(32): fatal error C1083: Cannot open include file: 'IEcoCalculatorX.h': No such file or directory
+     1>Done Building Project "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.12

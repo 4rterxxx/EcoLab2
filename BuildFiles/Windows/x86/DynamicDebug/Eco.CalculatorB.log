@@ -1,0 +1,28 @@
+﻿Build started 30.10.2025 14:07:45.
+     1>Project "C:\vs express\001.InsideACOM\Lessons\Lesson03\Eco.CalculatorB\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorB.vcxproj" on node 3 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\".
+       InitializeBuildStatus:
+         Creating "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\Eco.CalculatorB.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\vs express\VS Express 2010\VC\bin\CL.exe /c /I..\..\..\HeaderFiles /I..\..\..\SharedFiles /I"C:\vs express\EcoFramework\Eco.Core1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.MemoryManager1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.InterfaceBus1\SharedFiles" /ZI /nologo /W3 /WX- /Od /Oy- /D ECO_WINDOWS /D ECO_WIN32 /D ECO_X86_32 /D _DEBUG /D _WINDOWS /D ECO_DLL /D UGUID_UTILITY /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\\" /Fd"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\vc100.pdb" /Gz /TC /analyze- /errorReport:prompt ..\..\..\SourceFiles\CEcoCalculatorB.c ..\..\..\SourceFiles\CEcoCalculatorBFactory.c
+         CEcoCalculatorBFactory.c
+         CEcoCalculatorB.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\AE202E543CE54550899603BD70C62565.dll) does not match the Linker's OutputFile property value (C:\vs express\001.InsideACOM\Lessons\Lesson03\Eco.CalculatorB\BuildFiles\Windows\x86\DynamicDebug\AE202E543CE54550899603BD70C62565.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\vs express\VS Express 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\BuildFiles\Windows\x86\DynamicDebug\AE202E543CE54550899603BD70C62565.dll" /VERSION:"1.0" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\AE202E543CE54550899603BD70C62565.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\AE202E543CE54550899603BD70C62565.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\AE202E543CE54550899603BD70C62565.lib" /MACHINE:X86 /DLL "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\CEcoCalculatorB.obj"
+         "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\CEcoCalculatorBFactory.obj"
+         LINK : ..\..\..\BuildFiles\Windows\x86\DynamicDebug\AE202E543CE54550899603BD70C62565.dll not found or not built by the last incremental link; performing full link
+            Creating library C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\AE202E543CE54550899603BD70C62565.lib and object C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\AE202E543CE54550899603BD70C62565.exp
+         Eco.CalculatorB.vcxproj -> C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorBDynamicDebug\AE202E543CE54550899603BD70C62565.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"..\..\..\BuildFiles\Windows\x86\DynamicDebug\AE202E543CE54550899603BD70C62565.dll;#2" /manifest "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\AE202E543CE54550899603BD70C62565.dll.intermediate.manifest"
+       FinalizeBuildStatus:
+         Deleting file "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\Eco.CalculatorB.unsuccessfulbuild".
+         Touching "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\Eco.CalculatorB.lastbuildstate".
+     1>Done Building Project "C:\vs express\001.InsideACOM\Lessons\Lesson03\Eco.CalculatorB\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorB.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.01
