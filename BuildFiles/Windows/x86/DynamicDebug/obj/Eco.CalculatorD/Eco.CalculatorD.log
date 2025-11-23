@@ -1,6 +1,8 @@
-﻿Build started 30.10.2025 14:19:39.
-     1>Project "C:\vs express\001.InsideACOM\Lessons\Lesson06\Eco.CalculatorD\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorD.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 23.11.2025 15:32:33.
+     1>Project "C:\vs express\001.InsideACOM\Lessons\Lesson06\Eco.CalculatorD\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorD.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorD\Eco.CalculatorD.lastbuildstate".
+       InitializeBuildStatus:
          Creating "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorD\Eco.CalculatorD.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          C:\vs express\VS Express 2010\VC\bin\CL.exe /c /I..\..\..\HeaderFiles /I..\..\..\SharedFiles /I..\..\..\..\..\Lesson02\Eco.CalculatorA\SharedFiles /I..\..\..\..\..\Lesson03\Eco.CalculatorB\SharedFiles /I"C:\vs express\EcoFramework\Eco.Core1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.MemoryManager1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.InterfaceBus1\SharedFiles" /ZI /nologo /W3 /WX- /Od /Oy- /D ECO_WINDOWS /D ECO_WIN32 /D _DEBUG /D _WINDOWS /D ECO_X86_32 /D ECO_DLL /D UGUID_UTILITY /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorD\\" /Fd"C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorD\vc100.pdb" /Gz /TC /analyze- /errorReport:prompt ..\..\..\SourceFiles\CEcoCalculatorD.c ..\..\..\SourceFiles\CEcoCalculatorDFactory.c
@@ -17,8 +19,8 @@
        FinalizeBuildStatus:
          Deleting file "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorD\Eco.CalculatorD.unsuccessfulbuild".
          Touching "C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\obj\Eco.CalculatorD\Eco.CalculatorD.lastbuildstate".
-     1>Done Building Project "C:\vs express\001.InsideACOM\Lessons\Lesson06\Eco.CalculatorD\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorD.vcxproj" (build target(s)).
+     1>Done Building Project "C:\vs express\001.InsideACOM\Lessons\Lesson06\Eco.CalculatorD\AssemblyFiles\Windows\VisualStudio_10\Eco.CalculatorD.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.62
+Time Elapsed 00:00:00.63

@@ -88,7 +88,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\SharedFiles;..\..\..\HeaderFiles;$(ECO_FRAMEWORK)\Eco.Core1\SharedFiles;$(ECO_FRAMEWORK)\Eco.InterfaceBus1\SharedFiles;$(ECO_FRAMEWORK)\Eco.System1\SharedFiles;$(ECO_FRAMEWORK)\Eco.MemoryManager1\SharedFiles;$(ECO_FRAMEWORK)\Eco.FileSystemManagement1\SharedFiles;$(ECO_FRAMEWORK)\Eco.List1\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson02\Eco.CalculatorA\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson03\Eco.CalculatorB\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson05\Eco.CalculatorC\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson06\Eco.CalculatorD\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson07\Eco.CalculatorE\SharedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\SharedFiles;..\..\..\HeaderFiles;$(ECO_FRAMEWORK)\Eco.Core1\SharedFiles;$(ECO_FRAMEWORK)\Eco.InterfaceBus1\SharedFiles;$(ECO_FRAMEWORK)\Eco.System1\SharedFiles;$(ECO_FRAMEWORK)\Eco.MemoryManager1\SharedFiles;$(ECO_FRAMEWORK)\Eco.FileSystemManagement1\SharedFiles;$(ECO_FRAMEWORK)\Eco.List1\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson02\Eco.CalculatorA\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson03\Eco.CalculatorB\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson05\Eco.CalculatorC\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson06\Eco.CalculatorD\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson07\Eco.CalculatorE\SharedFiles;..\..\..\UnitTestFiles\HeaderFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <CallingConvention>StdCall</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
@@ -177,7 +177,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\UnitTestFiles\SourceFiles\CEcoLab1Sink.c" />
     <ClCompile Include="..\..\..\UnitTestFiles\SourceFiles\EcoLab1.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\UnitTestFiles\HeaderFiles\CEcoLab1Sink.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

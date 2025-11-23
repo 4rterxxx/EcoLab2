@@ -36,6 +36,12 @@
 #include "IdEcoCalculatorD.h"
 #include "IdEcoCalculatorE.h"
 
+
+#include "IEcoLab1Events.h"
+#include "IdEcoList1.h"
+#include "CEcoLab1Sink.h"
+#include "IEcoConnectionPointContainer.h"
+
 /* Функция сравнения для qsort с правильным соглашением вызовов */
 int __cdecl compare(const void* a, const void* b) {
     int32_t int_a = *((int32_t*)a);
@@ -65,6 +71,15 @@ int16_t EcoMain(IEcoUnknown* pIUnk) {
     IEcoInterfaceBus1* pIBus = 0;
     /* Указатель на интерфейс работы с памятью */
     IEcoMemoryAllocator1* pIMem = 0;
+
+	/* Указатель на интерфейс контейнера точек подключения */
+    IEcoConnectionPointContainer* pICPC = 0;
+    /* Указатель на интерфейс точки подключения */
+    IEcoConnectionPoint* pICP = 0;
+    /* Указатель на обратный интерфейс */
+    IEcoLab1Events* pIEcoLab1Sink = 0;
+	IEcoUnknown* pISinkUnk = 0;
+    uint32_t cAdvise = 0;
     
     /* Массивы для сортировки */
     int32_t* sortArrayCOM = 0;
@@ -73,6 +88,8 @@ int16_t EcoMain(IEcoUnknown* pIUnk) {
     uint32_t i = 0;
     uint32_t exponent = 0;
     int32_t isSorted = 1;
+
+
     
     /* Переменные для замера времени */
     clock_t startTimeCOM, endTimeCOM, totalTimeCOM;
@@ -144,240 +161,64 @@ int16_t EcoMain(IEcoUnknown* pIUnk) {
         goto Release;
     }
 
-    printf("\n=== Calculator Interfaces Demonstration ===\n\n");
 
-    /* IEcoCalculatorX напрямую из IEcoLab1 */
-    if (pIEcoLab1->pVTbl->QueryInterface(pIEcoLab1, &IID_IEcoCalculatorX, (void**)&pIX) == 0 && pIX) {
-        printf("IEcoCalculatorX obtained directly from IEcoLab1\n");
-        printf(" 1) 1337 + 812 = %d\n", pIX->pVTbl->Addition(pIX, 1337, 812));
-        printf(" 2) 321 - 123 = %d\n", pIX->pVTbl->Subtraction(pIX, 321, 123));
 
-        /* IEcoUnknown через IEcoCalculatorX */
-        if (pIX->pVTbl->QueryInterface(pIX, &IID_IEcoUnknown, (void**)&pOtherIUnknown) == 0 && pOtherIUnknown) {
-            printf("IEcoUnknown obtained from IEcoCalculatorX\n");
-            pOtherIUnknown->pVTbl->Release(pOtherIUnknown);
-        } else {
-            printf("Error: Failed to get IEcoUnknown from IEcoCalculatorX\n");
-        }
 
-        /* IEcoCalculatorY через IEcoCalculatorX */
-        if (pIX->pVTbl->QueryInterface(pIX, &IID_IEcoCalculatorY, (void**)&pOtherIY) == 0 && pOtherIY) {
-            printf("IEcoCalculatorY obtained from IEcoCalculatorX\n");
-            printf(" 1) 52 * 42 = %d\n", pOtherIY->pVTbl->Multiplication(pOtherIY, 52, 42));
-            printf(" 2) 333 / 33 = %d\n", pOtherIY->pVTbl->Division(pOtherIY, 333, 33));
-            pOtherIY->pVTbl->Release(pOtherIY);
-        } else {
-            printf("Error: Failed to get IEcoCalculatorY from IEcoCalculatorX\n");
-        }
-
-        /* IEcoLab1 через IEcoCalculatorX */
-        if (pIX->pVTbl->QueryInterface(pIX, &IID_IEcoLab1, (void**)&pOtherIEcoLab1) == 0 && pOtherIEcoLab1) {
-            printf("IEcoLab1 obtained from IEcoCalculatorX\n");
-            pOtherIEcoLab1->pVTbl->Release(pOtherIEcoLab1);
-        } else {
-            printf("Error: Failed to get IEcoLab1 from IEcoCalculatorX\n");
-        }
-
-        pIX->pVTbl->Release(pIX);
-    }
-    else {
-        printf("Error: Failed to get IEcoCalculatorX from IEcoLab1\n");
-    }
-    printf("\n");
-
-    /* IEcoCalculatorY напрямую из IEcoLab1 */
-    if (pIEcoLab1->pVTbl->QueryInterface(pIEcoLab1, &IID_IEcoCalculatorY, (void**)&pIY) == 0 && pIY) {
-        printf("IEcoCalculatorY obtained directly from IEcoLab1\n");
-        printf(" 1) 13 * 100 = %d\n", pIY->pVTbl->Multiplication(pIY, 13, 100));
-        printf(" 2) 99 / 11 = %d\n", pIY->pVTbl->Division(pIY, 99, 11));
-
-        /* IEcoUnknown через IEcoCalculatorY */
-        if (pIY->pVTbl->QueryInterface(pIY, &IID_IEcoUnknown, (void**)&pOtherIUnknown) == 0 && pOtherIUnknown) {
-            printf("IEcoUnknown obtained from IEcoCalculatorY\n");
-            pOtherIUnknown->pVTbl->Release(pOtherIUnknown);
-        } else {
-            printf("Error: Failed to get IEcoUnknown from IEcoCalculatorY\n");
-        }
-
-        /* IEcoCalculatorX через IEcoCalculatorY */
-        if (pIY->pVTbl->QueryInterface(pIY, &IID_IEcoCalculatorX, (void**)&pOtherIX) == 0 && pOtherIX) {
-            printf("IEcoCalculatorX obtained from IEcoCalculatorY\n");
-            printf(" 1) 555 + 777 = %d\n", pOtherIX->pVTbl->Addition(pOtherIX, 555, 777));
-            printf(" 2) 450 - 50 = %d\n", pOtherIX->pVTbl->Subtraction(pOtherIX, 450, 50));
-            pOtherIX->pVTbl->Release(pOtherIX);
-        } else {
-            printf("Error: Failed to get IEcoCalculatorX from IEcoCalculatorY\n");
-        }
-
-        /* IEcoLab1 через IEcoCalculatorY */
-        if (pIY->pVTbl->QueryInterface(pIY, &IID_IEcoLab1, (void**)&pOtherIEcoLab1) == 0 && pOtherIEcoLab1) {
-            printf("IEcoLab1 obtained from IEcoCalculatorY\n");
-            pOtherIEcoLab1->pVTbl->Release(pOtherIEcoLab1);
-        } else {
-            printf("Error: Failed to get IEcoLab1 from IEcoCalculatorY\n");
-        }
-
-        pIY->pVTbl->Release(pIY);
-    }
-    else {
-        printf("Error: Failed to get IEcoCalculatorY from IEcoLab1\n");
-    }
-	 printf("\n");
-
-	/* Получаем IEcoUnknown из IEcoLab1 */
-    if (pIEcoLab1->pVTbl->QueryInterface(pIEcoLab1, &IID_IEcoUnknown, (void**)&pIUnknown) == 0 && pIUnknown) {
-        printf("IEcoUnknown obtained from IEcoLab1\n");
-
-        /* IEcoLab1 через IEcoUnknown */
-        if (pIUnknown->pVTbl->QueryInterface(pIUnknown, &IID_IEcoLab1, (void**)&pOtherIEcoLab1) == 0 && pOtherIEcoLab1) {
-            printf("IEcoLab1 obtained from IEcoUnknown\n");
-            pOtherIEcoLab1->pVTbl->Release(pOtherIEcoLab1);
-        } else {
-            printf("Error: Failed to get IEcoLab1 from IEcoUnknown\n");
-        }
-
-        /* IEcoCalculatorX через IEcoUnknown */
-        if (pIUnknown->pVTbl->QueryInterface(pIUnknown, &IID_IEcoCalculatorX, (void**)&pOtherIX) == 0 && pOtherIX) {
-            printf("IEcoCalculatorX obtained from IEcoUnknown\n");
-            printf(" 1) 44 + 66 = %d\n", pOtherIX->pVTbl->Addition(pOtherIX, 44, 66));
-            printf(" 2) 999 - 9 = %d\n", pOtherIX->pVTbl->Subtraction(pOtherIX, 999, 9));
-            pOtherIX->pVTbl->Release(pOtherIX);
-        } else {
-            printf("Error: Failed to get IEcoCalculatorX from IEcoUnknown\n");
-        }
-
-        /* IEcoCalculatorY через IEcoUnknown */
-        if (pIUnknown->pVTbl->QueryInterface(pIUnknown, &IID_IEcoCalculatorY, (void**)&pOtherIY) == 0 && pOtherIY) {
-            printf("IEcoCalculatorY obtained from IEcoUnknown\n");
-            printf(" 1) 10 * 100 = %d\n", pOtherIY->pVTbl->Multiplication(pOtherIY, 10, 100));
-            printf(" 2) 1000 / 5 = %d\n", pOtherIY->pVTbl->Division(pOtherIY, 1000, 5));
-            pOtherIY->pVTbl->Release(pOtherIY);
-        } else {
-            printf("Error: Failed to get IEcoCalculatorY from IEcoUnknown\n");
-        }
-
-        pIUnknown->pVTbl->Release(pIUnknown);
-    } else {
-        printf("Error Failed to get IEcoUnknown from IEcoLab1\n");
+	 /* Проверка поддержки подключений обратного интерфейса */
+    result = pIEcoLab1->pVTbl->QueryInterface(pIEcoLab1, &IID_IEcoConnectionPointContainer, (void **)&pICPC);
+    if (result != 0 || pICPC == 0) {
+        /* Освобождение интерфейсов в случае ошибки */
+        goto Release;
     }
 
-    printf("\n=== End of Interface Demonstration ===\n\n");
+	 /* Запрос на получения интерфейса точки подключения */
+    result = pICPC->pVTbl->FindConnectionPoint(pICPC, &IID_IEcoLab1Events, &pICP);
+    if (result != 0 || pICP == 0) {
+        /* Освобождение интерфейсов в случае ошибки */
+        goto Release;
+    }
+    /* Освобождение интерфейса */
+    pICPC->pVTbl->Release(pICPC);
 
-    /* === ТЕСТИРОВАНИЕ СОРТИРОВКИ (ваш оригинальный код) === */
-    printf("=== Sorting Algorithms Testing ===\n");
+    /* Создание экземпляра обратного интерфейса */
+    result = createCEcoLab1Sink(pIMem, (IEcoLab1Events**)&pIEcoLab1Sink);
 
-    /* Table header */
-    printf("Array Size     | COM (ticks) | stdlib (ticks) | Faster  | Ratio\n");
-    printf("---------------|-------------|----------------|---------|----------\n");
-
-    /* Testing for powers of 2 from 2 to 20 */
-    exponent = 2;
-    while (exponent <= 17) {
-        arraySize = (uint32_t)pow(2, exponent);
-        
-        /* Выделение памяти для массивов */
-        sortArrayCOM = (int32_t*)pIMem->pVTbl->Alloc(pIMem, arraySize * sizeof(int32_t));
-        sortArrayStdlib = (int32_t*)pIMem->pVTbl->Alloc(pIMem, arraySize * sizeof(int32_t));
-
-        /* Заполнение массивов случайными значениями */
-        i = 0;
-        while (i < arraySize) {
-            int32_t randomValue = rand() % 10000 - 5000; /* Numbers from -5000 to 4999 */
-            sortArrayCOM[i] = randomValue;
-            sortArrayStdlib[i] = randomValue;
-            i++;
-        }
-
-        /* COM COMPONENT TEST */
-        startTimeCOM = clock();
-        
-        /* Вызов функции сортировки COM-компонента */
-        result = pIEcoLab1->pVTbl->MyFunction(pIEcoLab1, sortArrayCOM, arraySize);
-        if (result != 0) {
-            /* Освобождение памяти перед выходом */
-            pIMem->pVTbl->Free(pIMem, sortArrayCOM);
-            pIMem->pVTbl->Free(pIMem, sortArrayStdlib);
+    if (pIEcoLab1Sink != 0) {
+        result = pIEcoLab1Sink->pVTbl->QueryInterface(pIEcoLab1Sink, &IID_IEcoUnknown,(void **)&pISinkUnk);
+        if (result != 0 || pISinkUnk == 0) {
+            /* Освобождение интерфейсов в случае ошибки */
             goto Release;
         }
-
-        endTimeCOM = clock();
-        totalTimeCOM = endTimeCOM - startTimeCOM;
-
-        /* Проверка правильности сортировки COM */
-        isSorted = 1;
-        i = 0;
-        while (i < arraySize - 1) {
-            if (sortArrayCOM[i] > sortArrayCOM[i + 1]) {
-                isSorted = 0;
-                break;
-            }
-            i++;
+        /* Подключение */
+        result = pICP->pVTbl->Advise(pICP, pISinkUnk, &cAdvise);
+        /* Проверка */
+        if (result == 0 && cAdvise == 1) {
+            /* Сюда можно добавить код */
         }
-
-        if (isSorted == 0) {
-            printf("ERROR: COM sorting failed for size %u\n", arraySize);
-            pIMem->pVTbl->Free(pIMem, sortArrayCOM);
-            pIMem->pVTbl->Free(pIMem, sortArrayStdlib);
-            goto Release;
-        }
-
-        /* STANDARD LIBRARY TEST */
-        startTimeStdlib = clock();
-        
-        /* Вызов стандартной функции сортировки */
-        qsort(sortArrayStdlib, arraySize, sizeof(int32_t), compare);
-
-        endTimeStdlib = clock();
-        totalTimeStdlib = endTimeStdlib - startTimeStdlib;
-
-        /* Проверка правильности сортировки stdlib */
-        isSorted = 1;
-        i = 0;
-        while (i < arraySize - 1) {
-            if (sortArrayStdlib[i] > sortArrayStdlib[i + 1]) {
-                isSorted = 0;
-                break;
-            }
-            i++;
-        }
-
-        if (isSorted == 0) {
-            printf("ERROR: stdlib sorting failed for size %u\n", arraySize);
-            pIMem->pVTbl->Free(pIMem, sortArrayCOM);
-            pIMem->pVTbl->Free(pIMem, sortArrayStdlib);
-            goto Release;
-        }
-
-        /* OUTPUT RESULTS */
-        printf("2^%2u (%7u) | %11ld | %14ld | ", 
-               exponent, arraySize, totalTimeCOM, totalTimeStdlib);
-
-        /* Determine which sorting is faster with division by zero check */
-        if (totalTimeCOM == 0 || totalTimeStdlib == 0) {
-            printf("equal   | 1.00x\n");
-        }        else if (totalTimeCOM < totalTimeStdlib) {
-            speedRatio = (double)totalTimeStdlib / totalTimeCOM;
-            printf("COM     | %.2fx\n", speedRatio);
-        }
-        else if (totalTimeCOM > totalTimeStdlib) {
-            speedRatio = (double)totalTimeCOM / totalTimeStdlib;
-            printf("stdlib  | %.2fx\n", speedRatio);
-        }
-        else {
-            printf("equal   | 1.00x\n");
-        }
-
-        /* Освобождение памяти для текущего размера */
-        pIMem->pVTbl->Free(pIMem, sortArrayCOM);
-        pIMem->pVTbl->Free(pIMem, sortArrayStdlib);
-        sortArrayCOM = 0;
-        sortArrayStdlib = 0;
-
-        exponent++;
+        /* Освобождение интерфейса */
+        pISinkUnk->pVTbl->Release(pISinkUnk);
     }
 
-    printf("=========================================\n");
-    printf("Testing completed successfully! Press any key to exit...\n");
+	/* Создание массива из 8 элементов */
+	arraySize = 8;
+
+	/* Выделение памяти для массива */
+	sortArrayCOM = (int32_t*)pIMem->pVTbl->Alloc(pIMem, arraySize * sizeof(int32_t));
+
+	/* Заполнение массива случайными значениями */
+	i = 0;
+	while (i < arraySize) {
+		int32_t randomValue = rand() % 10; /* Numbers from -5000 to 4999 */
+		sortArrayCOM[i] = randomValue;
+		i++;
+	}
+
+	/* Вызов функции сортировки COM-компонента */
+	result = pIEcoLab1->pVTbl->MyFunction(pIEcoLab1, sortArrayCOM, arraySize);
+
+	/* Освобождение памяти */
+	pIMem->pVTbl->Free(pIMem, sortArrayCOM);
+
     getchar();
     /* Если дошли сюда, все тесты прошли успешно */
     result = 0;

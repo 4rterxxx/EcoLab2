@@ -88,7 +88,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\..\..\HeaderFiles;..\..\..\SharedFiles;$(ECO_FRAMEWORK)\Eco.Core1\SharedFiles;$(ECO_FRAMEWORK)\Eco.InterfaceBus1\SharedFiles;$(ECO_FRAMEWORK)\Eco.System1\SharedFiles;$(ECO_FRAMEWORK)\Eco.MemoryManager1\SharedFiles;$(ECO_FRAMEWORK)\Eco.FileSystemManagement1\SharedFiles;$(ECO_FRAMEWORK)\Eco.List1\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson02\Eco.CalculatorA\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson03\Eco.CalculatorB\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson05\Eco.CalculatorC\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson06\Eco.CalculatorD\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson07\Eco.CalculatorE\SharedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\HeaderFiles;..\..\..\SharedFiles;$(ECO_FRAMEWORK)\Eco.Core1\SharedFiles;$(ECO_FRAMEWORK)\Eco.InterfaceBus1\SharedFiles;$(ECO_FRAMEWORK)\Eco.System1\SharedFiles;$(ECO_FRAMEWORK)\Eco.MemoryManager1\SharedFiles;$(ECO_FRAMEWORK)\Eco.FileSystemManagement1\SharedFiles;$(ECO_FRAMEWORK)\Eco.List1\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson02\Eco.CalculatorA\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson03\Eco.CalculatorB\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson05\Eco.CalculatorC\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson06\Eco.CalculatorD\SharedFiles;$(ECO_INSIDEACOM)\Lessons\Lesson07\Eco.CalculatorE\SharedFiles;..\..\..\UnitTestFiles\HeaderFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <CallingConvention>StdCall</CallingConvention>
       <CompileAs>CompileAsC</CompileAs>
@@ -168,12 +168,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\HeaderFiles\CEcoLab1.h" />
+    <ClInclude Include="..\..\..\HeaderFiles\CEcoLab1ConnectionPoint.h" />
+    <ClInclude Include="..\..\..\HeaderFiles\CEcoLab1EnumConnectionPoints.h" />
+    <ClInclude Include="..\..\..\HeaderFiles\CEcoLab1EnumConnections.h" />
     <ClInclude Include="..\..\..\HeaderFiles\CEcoLab1Factory.h" />
     <ClInclude Include="..\..\..\SharedFiles\IdEcoLab1.h" />
+    <ClInclude Include="..\..\..\SharedFiles\IEcoConnectionPoint.h" />
+    <ClInclude Include="..\..\..\SharedFiles\IEcoConnectionPointContainer.h" />
+    <ClInclude Include="..\..\..\SharedFiles\IEcoEnumConnectionPoints.h" />
+    <ClInclude Include="..\..\..\SharedFiles\IEcoEnumConnections.h" />
     <ClInclude Include="..\..\..\SharedFiles\IEcoLab1.h" />
+    <ClInclude Include="..\..\..\SharedFiles\IEcoLab1Events.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\SourceFiles\CEcoLab1.c" />
+    <ClCompile Include="..\..\..\SourceFiles\CEcoLab1ConnectionPoint.c" />
+    <ClCompile Include="..\..\..\SourceFiles\CEcoLab1EnumConnectionPoints.c" />
+    <ClCompile Include="..\..\..\SourceFiles\CEcoLab1EnumConnections.c" />
     <ClCompile Include="..\..\..\SourceFiles\CEcoLab1Factory.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

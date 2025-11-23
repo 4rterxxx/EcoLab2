@@ -26,6 +26,10 @@
 #include "IEcoCalculatorX.h"
 #include "IEcoCalculatorY.h"
 
+#include "IEcoEnumConnections.h"
+#include "IEcoConnectionPointContainer.h"
+#include "CEcoLab1ConnectionPoint.h"
+
 typedef struct CEcoLab1 {
 
     /* Таблица функций интерфейса IEcoLab1 */
@@ -39,6 +43,9 @@ typedef struct CEcoLab1 {
 
     /* Неделегирующий интерфейс IEcoNondelegatingUnknown */
     IEcoUnknownVTbl* m_pVTblINondelegatingUnk;
+
+	/* Таблица функций интерфейса IEcoConnectionPointContainer */
+    IEcoConnectionPointContainerVTbl* m_pVTblICPC;
 
     /* Счетчик ссылок */
     uint32_t m_cRef;
@@ -60,6 +67,9 @@ typedef struct CEcoLab1 {
 
 	/* Делегирующий IEcoUnknown, указывает на внешний или неделегирующий IEcoUnknown */
     IEcoUnknown* m_pIUnkOuter;
+
+	/* Точка подключения */
+    CEcoLab1ConnectionPoint* m_pISinkCP;
 
     /* Данные экземпляра */
     char_t* m_Name;

@@ -1,16 +1,29 @@
-﻿Build started 30.10.2025 21:31:19.
-     1>Project "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
+﻿Build started 23.11.2025 15:32:34.
+     1>Project "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest.vcxproj" on node 5 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file "Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.lastbuildstate".
+       InitializeBuildStatus:
          Creating "Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\vs express\VS Express 2010\VC\bin\CL.exe /c /I..\..\..\SharedFiles /I..\..\..\HeaderFiles /I"C:\vs express\EcoFramework\Eco.Core1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.InterfaceBus1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.System1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.MemoryManager1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.FileSystemManagement1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.List1\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson02\Eco.CalculatorA\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson03\Eco.CalculatorB\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson05\Eco.CalculatorC\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson06\Eco.CalculatorD\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson07\Eco.CalculatorE\SharedFiles" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D UGUID_UTILITY /D ECO_X86_32 /D ECO_WINDOWS /D ECO_WIN32 /D ECO_DLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Eco.Lab1UnitTest\DynamicDebug\\" /Fd"Eco.Lab1UnitTest\DynamicDebug\vc100.pdb" /Gz /TC /analyze- /errorReport:prompt ..\..\..\UnitTestFiles\SourceFiles\EcoLab1.c
+         C:\vs express\VS Express 2010\VC\bin\CL.exe /c /I..\..\..\SharedFiles /I..\..\..\HeaderFiles /I"C:\vs express\EcoFramework\Eco.Core1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.InterfaceBus1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.System1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.MemoryManager1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.FileSystemManagement1\SharedFiles" /I"C:\vs express\EcoFramework\Eco.List1\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson02\Eco.CalculatorA\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson03\Eco.CalculatorB\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson05\Eco.CalculatorC\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson06\Eco.CalculatorD\SharedFiles" /I"C:\vs express\001.InsideACOM\Lessons\Lesson07\Eco.CalculatorE\SharedFiles" /I..\..\..\UnitTestFiles\HeaderFiles /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D UGUID_UTILITY /D ECO_X86_32 /D ECO_WINDOWS /D ECO_WIN32 /D ECO_DLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Eco.Lab1UnitTest\DynamicDebug\\" /Fd"Eco.Lab1UnitTest\DynamicDebug\vc100.pdb" /Gz /TC /analyze- /errorReport:prompt ..\..\..\UnitTestFiles\SourceFiles\CEcoLab1Sink.c ..\..\..\UnitTestFiles\SourceFiles\EcoLab1.c
          EcoLab1.c
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(96): warning C4101: 'startTimeStdlib' : unreferenced local variable
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(96): warning C4101: 'endTimeStdlib' : unreferenced local variable
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(96): warning C4101: 'totalTimeStdlib' : unreferenced local variable
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(95): warning C4101: 'endTimeCOM' : unreferenced local variable
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(95): warning C4101: 'totalTimeCOM' : unreferenced local variable
+     1>c:\vs express\lab2\mark 10 my\eco.lab1\unittestfiles\sourcefiles\ecolab1.c(95): warning C4101: 'startTimeCOM' : unreferenced local variable
+         CEcoLab1Sink.c
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\objbase.h(248): warning C4005: 'interface' : macro redefinition
+                 c:\vs express\ecoframework\eco.core1\sharedfiles\iecobase1.h(29) : see previous definition of 'interface'
+         Generating Code...
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.exe) does not match the Linker's OutputFile property value (C:\vs express\lab2\mark 10 my\Eco.Lab1\BuildFiles\Windows\x86\DynamicDebug\Eco.Lab1UnitTest.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
        Link:
-         C:\vs express\VS Express 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\BuildFiles\Windows\x86\DynamicDebug\Eco.Lab1UnitTest.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\..\BuildFiles\Windows\x86\DynamicDebug\ /LIBPATH:"C:\vs express\EcoFramework\Eco.InterfaceBus1\BuildFiles\Windows\x86\StaticRelease\\" /LIBPATH:"C:\vs express\EcoFramework\Eco.System1\BuildFiles\Windows\x86\StaticRelease\\" /LIBPATH:"C:\vs express\EcoFramework\Eco.MemoryManager1\BuildFiles\Windows\x86\StaticRelease\\" /LIBPATH:"C:\vs express\EcoFramework\Eco.FileSystemManagement1\BuildFiles\Windows\x86\StaticRelease\\" 00000000000000000000000042757331.lib 0000000000000000000000004D656D31.lib 00000000000000000000000046534D31.lib 00000000000000000000000053595332.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.lib" /MACHINE:X86 Eco.Lab1UnitTest\DynamicDebug\EcoLab1.obj
-     1>EcoLab1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+         C:\vs express\VS Express 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\..\BuildFiles\Windows\x86\DynamicDebug\Eco.Lab1UnitTest.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\..\BuildFiles\Windows\x86\DynamicDebug\ /LIBPATH:"C:\vs express\EcoFramework\Eco.InterfaceBus1\BuildFiles\Windows\x86\StaticRelease\\" /LIBPATH:"C:\vs express\EcoFramework\Eco.System1\BuildFiles\Windows\x86\StaticRelease\\" /LIBPATH:"C:\vs express\EcoFramework\Eco.MemoryManager1\BuildFiles\Windows\x86\StaticRelease\\" /LIBPATH:"C:\vs express\EcoFramework\Eco.FileSystemManagement1\BuildFiles\Windows\x86\StaticRelease\\" 00000000000000000000000042757331.lib 0000000000000000000000004D656D31.lib 00000000000000000000000046534D31.lib 00000000000000000000000053595332.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.lib" /MACHINE:X86 Eco.Lab1UnitTest\DynamicDebug\CEcoLab1Sink.obj
+         Eco.Lab1UnitTest\DynamicDebug\EcoLab1.obj
+     1>CEcoLab1Sink.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
          00000000000000000000000053595332.lib(CEcoSystem1EntryPoint.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
-     1>EcoLab1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     1>CEcoLab1Sink.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
      1>LIBCMTD.lib(crt0init.obj) : warning LNK4098: defaultlib 'libcmt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
          Generating code
          Finished generating code
@@ -33,8 +46,8 @@
        FinalizeBuildStatus:
          Deleting file "Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.unsuccessfulbuild".
          Touching "Eco.Lab1UnitTest\DynamicDebug\Eco.Lab1UnitTest.lastbuildstate".
-     1>Done Building Project "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest.vcxproj" (build target(s)).
+     1>Done Building Project "C:\vs express\lab2\mark 10 my\Eco.Lab1\AssemblyFiles\Windows\VisualStudio_10\Eco.Lab1UnitTest.vcxproj" (rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.71
+Time Elapsed 00:00:00.87
